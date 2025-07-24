@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar style="--background: yellow;">
+    <ion-title>Pencarian Buku</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="--background: #ffffff;">
+
+  <!-- 🔍 Form Input -->
+  <ion-item>
+    <ion-label position="floating">Cari Judul</ion-label>
+    <ion-input
+      type="text"
+      [(ngModel)]="keyword"
+      (ionInput)="cariBuku()">
+    </ion-input>
+  </ion-item>
+
+  <!-- ⚠️ Pesan -->
+  <div *ngIf="pesan" class="ion-text-center ion-margin-top">
+    <ion-text color="danger">{{ pesan }}</ion-text>
+  </div>
+
+  <!-- 📚 Daftar Judul Buku (Tanpa Gambar) -->
+  <ion-card *ngFor="let buku of hasilPencarian" class="custom-card" style="border: 2px solid gold; background: #1e1e1e; color: white;">
+    <ion-card-header>
+      <ion-card-title style="color: #ff5252;">{{ buku.judul }}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <!-- 🔍 Tidak Ditemukan -->
+  <div *ngIf="hasilPencarian.length === 0 && keyword.length > 0 && !pesan" class="ion-text-center ion-margin-top">
+    <ion-text color="medium">Tidak ada hasil untuk kata kunci "{{ keyword }}"</ion-text>
+  </div>
+
+</ion-content>

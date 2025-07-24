@@ -1,0 +1,7 @@
+{
+  "name": "kopi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

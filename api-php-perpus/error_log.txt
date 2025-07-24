@@ -1,0 +1,45 @@
+[19-Jun-2025 07:24:12 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:14
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(14): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 14
+[19-Jun-2025 07:26:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:13
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 13
+[19-Jun-2025 07:26:45 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:13
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 13
+[19-Jun-2025 07:27:00 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:13
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 13
+[19-Jun-2025 07:27:14 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:13
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 13
+[19-Jun-2025 07:28:50 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:18
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 18
+[19-Jun-2025 07:29:24 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:18
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 18
+[19-Jun-2025 07:30:07 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'perpustakaan' in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:18
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(18): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'perpustakaan')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 18
+[27-Jun-2025 19:14:30 Europe/Berlin] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'u547501883_apimarjo'@'localhost' (using password: YES) in C:\xampp\htdocs\api-php-perpus\tambah_buku.php:15
+Stack trace:
+#0 C:\xampp\htdocs\api-php-perpus\tambah_buku.php(15): mysqli->__construct('localhost', 'u547501883_apim...', Object(SensitiveParameterValue), 'u547501883_apim...')
+#1 {main}
+  thrown in C:\xampp\htdocs\api-php-perpus\tambah_buku.php on line 15

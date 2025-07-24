@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KampusBaca</string>
+    <string name="title_activity_main">KampusBaca</string>
+    <string name="package_name">com.kampusbaca.app</string>
+    <string name="custom_url_scheme">com.kampusbaca.app</string>
+</resources>

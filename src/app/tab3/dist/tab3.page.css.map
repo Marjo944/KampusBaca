@@ -1,0 +1,1 @@
+{"version":3,"names":[],"mappings":"","sources":["tab3.page.scss"],"sourcesContent":["ion-title {\r\n  color: black;\r\n  font-weight: bold;\r\n}\r\n"],"file":"tab3.page.css"}

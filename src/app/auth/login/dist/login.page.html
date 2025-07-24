@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar style="--background: yellow;">
+    <ion-title class="ion-text-center" style="color: black;">Perpustakaan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding login-background">
+  <div class="login-container" style="max-width: 400px; margin: auto; text-align: center;">
+    <img src="assets/buku.png" class="login-image" style="width: 100px; margin-bottom: 20px;" />
+
+    <h2 class="login-title" style="margin-bottom: 20px;">Login</h2>
+
+    <ion-item>
+      <ion-label position="floating">NIM</ion-label>
+      <ion-input [(ngModel)]="nim" type="text" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input [(ngModel)]="password" type="password" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" style="margin-top: 20px;" (click)="login()">MASUK</ion-button>
+    <ion-button fill="clear" routerLink="/register" style="margin-top: 10px; color: #007bff;">Belum punya akun?</ion-button>
+  </div>
+</ion-content>

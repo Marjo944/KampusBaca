@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-toolbar style="--background: yellow;">
+    <ion-title style="color: black; font-weight: bold;">
+      {{ isAdmin ? 'Admin Perpustakaan' : 'Tentang Aplikasi' }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="!isAdmin" color="light" (click)="showLoginAdmin = true">
+        Login Admin
+      </ion-button>
+      <ion-button *ngIf="isAdmin" color="danger" (click)="logoutAdmin()">
+        Logout
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="--background: #ffffff;">
+
+  <!-- 🧾 Tentang Aplikasi -->
+  <ion-card color="light" *ngIf="!isAdmin && !showLoginAdmin">
+    <ion-card-header>
+      <ion-card-title>Tentang Aplikasi</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Aplikasi Perpustakaan ITB Indonesia</strong> memudahkan mahasiswa dalam mengakses informasi buku, melakukan peminjaman, dan melihat riwayat peminjaman secara online.</p>
+      <ul>
+        <li>Mencari dan melihat koleksi buku</li>
+        <li>Peminjaman buku secara digital</li>
+        <li>Login admin untuk mengelola data</li>
+      </ul>
+      <p style="font-size: 13px; color: gray; margin-top: 10px;">
+        Versi 1.0 &bull; &copy; 2025 ITB Indonesia
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- 🔐 Login Admin Form -->
+  <div *ngIf="showLoginAdmin && !isAdmin">
+    <h2>Login Admin</h2>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input [(ngModel)]="adminUsername" placeholder="Masukkan Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input type="password" [(ngModel)]="adminPassword" placeholder="Masukkan Password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" (click)="loginAdmin()">Login</ion-button>
+    <ion-button expand="block" fill="clear" color="medium" (click)="showLoginAdmin = false">Batal</ion-button>
+  </div>
+
+  <!-- ✅ Panel Admin -->
+  <div *ngIf="isAdmin">
+    <h2>Tambah Buku Baru</h2>
+
+    <ion-item>
+      <ion-input [(ngModel)]="newBook.judul" placeholder="Masukkan Judul Buku"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <input type="file" (change)="onFileSelected($event)" accept="image/*" />
+    </ion-item>
+
+    <ion-button expand="block" color="primary" (click)="tambahBuku()">Tambah Buku</ion-button>
+
+    <h2 class="ion-margin-top">Riwayat Peminjaman</h2>
+    <div *ngIf="riwayatPeminjaman.length === 0">
+      <ion-card>
+        <ion-card-content>Tidak ada riwayat peminjaman.</ion-card-content>
+      </ion-card>
+    </div>
+
+    <ion-card *ngFor="let item of riwayatPeminjaman" style="border: 2px solid gold; background: #1e1e1e; color: white;">
+      <ion-card-header>
+        <ion-card-title style="font-size: 18px;">{{ item.judul || '-' }}</ion-card-title>
+        <ion-card-subtitle style="font-size: 14px;">{{ item.penulis || '-' }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>NIM:</strong> {{ item.nim || '-' }}</p>
+        <p><strong>Kode Buku:</strong> {{ item.kode_buku || '-' }}</p>
+        <p><strong>Tanggal Pinjam:</strong> {{ item.tgl_pinjam || '-' }}</p>
+        <p><strong>Tanggal Kembali:</strong> {{ item.tgl_kembali || '-' }}</p>
+        <p><strong>Catatan:</strong> {{ item.catatan || '-' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- 🔴 Tombol Keluar Aplikasi -->
+  <ion-button 
+    *ngIf="!isAdmin && !showLoginAdmin" 
+    expand="block" 
+    color="danger" 
+    class="ion-margin-top" 
+    (click)="keluarAplikasi()">
+    Keluar Aplikasi
+  </ion-button>
+
+</ion-content>

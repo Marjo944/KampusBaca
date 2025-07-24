@@ -1,0 +1,1 @@
+{"version":3,"sources":["tab3.page.scss"],"names":[],"mappings":"AAAA,UACE,MAAO,KACP,YAAa","file":"tab3.page.min.css","sourcesContent":["ion-title {\r\n  color: black;\r\n  font-weight: bold;\r\n}\r\n"]}

@@ -1,0 +1,49 @@
+<ion-header>
+ <ion-toolbar style="--background: yellow;">
+    <ion-title>Peminjaman Buku</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding" style="--background: #ffffff;">
+  <form (ngSubmit)="submitForm()">
+
+    <ion-item>
+      <ion-label position="floating">NIM</ion-label>
+      <ion-input type="text" [(ngModel)]="form.nim" name="nim" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Judul Buku</ion-label>
+      <ion-input type="text" [(ngModel)]="form.judul_buku" name="judul_buku" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Pengarang</ion-label>
+      <ion-input type="text" [(ngModel)]="form.pengarang" name="pengarang" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Kode Buku</ion-label>
+      <ion-input type="text" [(ngModel)]="form.kode_buku" name="kode_buku"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tanggal Pinjam</ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="form.tanggal_pinjam" name="tanggal_pinjam" required></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tanggal Kembali</ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="form.tanggal_kembali" name="tanggal_kembali" required></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Catatan</ion-label>
+      <ion-textarea [(ngModel)]="form.catatan" name="catatan"></ion-textarea>
+    </ion-item>
+
+    <ion-button type="submit" expand="block" color="danger" class="ion-margin-top">
+      Pinjam Buku
+    </ion-button>
+  </form>
+</ion-content>

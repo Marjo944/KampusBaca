@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar style="--background: yellow;">
+    <ion-title class="ion-text-center" style="color: black;">
+      Perpustakaan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding login-background">
+  <div class="login-container">
+    <img src="assets/buku.png" class="login-image" />
+
+    <h2 class="login-title">Registrasi</h2>
+
+    <ion-item>
+      <ion-input placeholder="NIM" [(ngModel)]="nim"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Password" type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" color="success" (click)="register()">Daftar</ion-button>
+    <ion-button fill="clear" routerLink="/login">Sudah punya akun?</ion-button>
+  </div>
+</ion-content>
