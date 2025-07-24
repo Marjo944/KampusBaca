@@ -10,14 +10,14 @@ Aplikasi **KampusBaca** adalah aplikasi mobile berbasis **Ionic Framework** (Tab
 - **Tab 1 - Beranda**  
   Menampilkan banner dan daftar buku beserta gambar dari API.
 
-- **Tab 2 - Form Buku Tamu**  
+- **Tab 2 - Pencarian buku**  
   Mahasiswa mengisi formulir: NIM, buku yang dibaca, pengarang, tanggal pinjam, catatan, dll.
 
-- **Tab 3 - Riwayat Kunjungan**  
+- **Tab 3 - Pinjambuku**  
   Menampilkan daftar kunjungan yang telah dilakukan mahasiswa.
 
-- **Tab 4 - Tentang Aplikasi**  
-  Berisi informasi tentang kampus, visi misi, dan pengembang aplikasi.
+- **Tab 4 - Tentang Aplikasi dan admin dan upluad buku dan Riwayat**  
+  Berisi informasi  upload buku dan riwayat peminjaman buku.
 
 ---
 
